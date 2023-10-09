@@ -510,7 +510,8 @@ Slic3r::ExPolygons union_ex(const Slic3r::ExPolygons &subject, const Slic3r::Pol
 Slic3r::ExPolygons union_ex(const Slic3r::Polygons &subject, const Slic3r::ExPolygons &subject2);
 Slic3r::ExPolygons union_ex(const Slic3r::Surfaces &subject);
 
-Slic3r::ExPolygons union_ex(const Slic3r::ExPolygons& poly1, const Slic3r::ExPolygons& poly2, bool safety_offset_ = false);
+// SuperSlicer - JM: this clashes with the newly added (2.6.1) function and the single perimeter on top code doesn't make use of safety_offset_
+//Slic3r::ExPolygons union_ex(const Slic3r::ExPolygons& poly1, const Slic3r::ExPolygons& poly2, bool safety_offset_ = false);
 
 // Convert polygons / expolygons into ClipperLib::PolyTree using ClipperLib::pftEvenOdd, thus union will NOT be performed.
 // If the contours are not intersecting, their orientation shall not be modified by union_pt().
